@@ -1,0 +1,13 @@
+from PIL import Image
+from numpy import *
+
+im1 = Image.open('dot-300x168.jpg')
+im2 = Image.open('star-1-300x168.jpg')
+
+im1arr = asarray(im1)
+im2arr = asarray(im2)
+
+subtraction = im2arr - im1arr
+
+resultImage = Image.fromarray(subtraction)
+resultImage.show()
